@@ -78,7 +78,7 @@ public class ReflexCalc {
                             + "Content-Type: application/json\r\n"
                             + "\r\n"
                             + response;
-                } else { // reflexivo
+                } else { // reflexive
                     String command = query.substring(0, query.indexOf("("));
                     String param = query.replace(command, "").replace("(", "").replace(")", "");
                     System.out.println(param);
@@ -96,11 +96,11 @@ public class ReflexCalc {
 
                     Class<?> clas = Math.class;
                     try {
-                        if (paramTwo) {
+                        if (paramTwo) { // method with two parameters
                             Method met = clas.getMethod(command, Double.TYPE, Double.TYPE);
                             System.out.println("Params: " + met.getParameterCount());
                             response = met.invoke(null, param1, param2).toString();
-                        } else { // method with one param
+                        } else { // method with one parameters
                             Method met = clas.getMethod(command, Double.TYPE);
                             response = met.invoke(null, param1).toString();
                         }
