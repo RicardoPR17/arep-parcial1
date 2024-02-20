@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Calculadora Reflexiva y QuickSort</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <h1>Form for QuickSort or Math method</h1>
+    <form action="/hello">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name"><br><br>
+        <input type="button" value="Submit" onclick="loadGetMsg()">
+    </form>
+    <div id="getrespmsg"></div>
+
+    <script>
+        function loadGetMsg() {
+            let nameVar = document.getElementById("name").value;
+            const xhttp = new XMLHttpRequest();
+            xhttp.onload = function () {
+                document.getElementById("getrespmsg").innerHTML = this.responseText;
+            }
+            xhttp.open("GET", "/computar?comando=" + nameVar);
+            xhttp.send();
+        }
+    </script>
+</body>
+</html>
