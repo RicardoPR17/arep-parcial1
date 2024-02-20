@@ -172,10 +172,13 @@ public class ReflexCalc {
         while (swap < end) {
             if (A.get(swap) > pivot) {
                 int swapValue = A.get(swap);
-                int swapIndex = A.indexOf(swap);
+                int swapIndex = swap;
                 A.set(swapIndex, pivot);
                 A.set(pivotIndex, swapValue);
                 pivotIndex = swapIndex;
+                swap += 1;
+            } else {
+                swap += 1;
             }
         }
 

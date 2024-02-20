@@ -9,13 +9,15 @@ Para ejecutar el proyecto, se deben abrir 2 terminales.
 
 Hecho esto, vamos a nuestro navegador y accedemos a la ruta http://localhost:35000/calculadora. Aquí podemos hacer 2 tipos de posibilidades a escribir en el campo de texto:
 
-1. Enviar un método de la clase Math de Java junto a sus parámetros
+1. Enviar un método de la clase Math de Java junto a sus parámetros. Si son 2 parámetros, deben ser separados solamente por coma.
 
-  Ejemplos:
+    Ejemplos:
 
-  ![Método con un solo parámetro](image.png)
-  ![Método con dos parámetros](image-1.png)
+    ![Método con un solo parámetro](image.png)
+    ![Método con dos parámetros](image-1.png)
 
 2. Enviar una lista para ejecutar QuickSort sobre ella
   
-  Ejemplo:
+   Ejemplo:
+   
+   ![Caso QuickSort](image-2.png)
